@@ -47,22 +47,30 @@ Each part of the tech stack used for this project was used to different degrees 
 - IBM SPPS Modeler - analytics software for generating models
 - Python - data pre-processing and data analytics implementation
 - Amazon Web Services - cloud computing in conjunction with MySQL
-- Weka - data mining tool
+- Weka - data mining tool for pre-processing data
 
 ### Technique
 
-I undertook my share of the project with inspiration from the [Collaborative Filtering](https://en.wikipedia.org/wiki/Collaborative_filtering) technique, which takes advantage of the predictive power of analyzing like-minded users. At its most basic level, collaborative filtering is present in everyday affairs as it is “the process of filtering or evaluating items using the opinions of other people” (Schafer, Frankowski, Herlocker, & Sen, 2015).
+I undertook my share of the project with inspiration from the [Collaborative Filtering](https://en.wikipedia.org/wiki/Collaborative_filtering) technique, which takes advantage of the predictive power of analyzing like-minded users. 
+At its most basic level, collaborative filtering is present in everyday affairs as it is “the process of filtering or evaluating items using the opinions of other people” (Schafer, Frankowski, Herlocker, & Sen, 2015).
 
-For example, if each tuple is structured as [id, movieId, rating], then the tuples [246, 2, 3.5] and [357, 2, 3.5] would suggest that both users 246 and 357 are like-minded in that they rated movie "2" with a "3.5" rating. This underlying technique was combined with further processing steps and implemented in a Python CLI tool.
+For example, if each tuple is structured as [id, movieId, rating], then the tuples [246, 2, 3.5] and [357, 2, 3.5] would suggest that both users 246 and 357 are like-minded in that they rated movie "2" with a "3.5" rating. 
+This underlying technique was combined with further processing steps and implemented in a Python CLI tool.
 
 ### Python Implementation
 
-The Python script works by first parsing an input set of tuples that represent the initial movies that a user has rated. The movie-rating tuples are then extracted and the movies data is scanned for other users where similar movie-rating tuples occur. As this catches any user that agrees with the input user on any movie-rating tuple, a sorting algorithm is applied to only select users where there is a high level of agreement with the input user. For example, only users that have at least eight out of ten similar movie-rating tuples with the input user are accepted. With this list of users, the script obtains all of their cumulative movie-rating tuples. Once again, this data is further filtered by only selecting movie-ratings that occur above a certain threshold in frequency and in minimum movie rating. As a result, the final output file contains movie recommendations that are both high in favorable ratings and occur frequently in the network of like-minded movie watchers.
+The Python script works by first parsing an input set of tuples that represent the initial movies that a user has rated. 
+The movie-rating tuples are then extracted and the movies data is scanned for other users where similar movie-rating tuples occur. 
+As this catches any user that agrees with the input user on any movie-rating tuple, a sorting algorithm is applied to only select users where there is a high level of agreement with the input user. 
+For example, only users that have at least eight out of ten similar movie-rating tuples with the input user are accepted. 
+With this list of users, the script obtains all of their cumulative movie-rating tuples. 
+Once again, this data is further filtered by only selecting movie-ratings that occur above a certain threshold in frequency and in minimum movie rating. 
+As a result, the final output file contains movie recommendations that are both high in favorable ratings and occur frequently in the network of like-minded movie watchers.
 
 
 ```
 $ python eng-q1.py # v1.0 for the project
-
+...
 ```
 
 ### Results
