@@ -16,11 +16,25 @@ The following main data sources were used for this project.
 - [MovieLens Tag Genome](http://grouplens.org/datasets/movielens/tag-genome/)
 - [IMDb](http://www.imdb.com/interfaces)
 
-MovieLens 
+### MovieLens 
 
-MovieLens Tag Genome
+The MovieLens movie ratings data is provided by GroupLens Research in datasets ranging in size from 100K to 20 million. There is a "Latest" dataset that includes more recent ratings data up to 2016. Our team chose to use the stable 20 million (MovieLens 20M) count dataset and the Latest dataset.
 
-IMDb
+Permalink (20M): http://grouplens.org/datasets/movielens/20m/
+Permalink (Latest): http://grouplens.org/datasets/movielens/latest/
+
+### MovieLens Tag Genome
+
+Tag Genome data is also from GroupLens Research. In this dataset, the relevance of certain tags to a range of movies was calculated using a machine learning algorithm by the research team.
+
+Permalink: http://grouplens.org/datasets/movielens/tag-genome/
+
+### IMDb
+
+The IMDb plain text data dumps are available through 2 FTP sites. 
+
+Permalink: http://www.imdb.com/interfaces
+
 
 ## Recommendation System
 
