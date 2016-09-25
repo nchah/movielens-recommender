@@ -71,7 +71,15 @@ As a result, the final output file contains movie recommendations that are both 
 ```
 $ python eng-q1.py # v1.0 for the project
 ...
+
+$ python mlr-engine-v2.py # refactored version
+...
 ```
+
+Running Python implementation on the command line.
+![Python CLI GIF](/docs/eng-py2.gif)
+
+
 
 ### Results
 
