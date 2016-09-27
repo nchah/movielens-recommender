@@ -4,47 +4,53 @@
 import csv
 import operator
 import sys
-# import numpy
 from collections import OrderedDict
-# import pickle
 
 """
-Q1. Given a user who has rated x amount of movies that have been watched, 
-what are the movies that have a high likelihood of being rated similarly by the user?
+Q1. Given a user who has rated x amount of movies that have been watched, what are
+the movies that have a high likelihood of being rated similarly by the user?
 
 -> Using dissimilarity measure: d(i, j) = (p - m)/p
 
 Workflow:
-	s1()
+- Functions are named sequentially, in the format  s1()...sN()
+- Output files of each function are named following the format a1-.csv...aN-.csv
+
+s1()
 - Process the input.csv data, extract rows where movie-rating tuples match with input
-	s2()
+
+s2()
 - Sort the users that have the most movie-rating tuples agreement with the input user
 - After above sorting, print counts for each frequency
-	s3()
+
+s3()
 - Get the userIDs with high agreement values
-	s4()
+
+s4()
 - Get all movie-rating tuples by high agreement users
-	s5()
+
+s5()
 - Sort movies column by distinct movies
 - After above sorting, get counts of # of movie-rating tuples for each movie
-	s6()
+
+s6()
 - Extract the movies with # ratings above a certain threshold
 - Extract the movie-rating tuples
 - Average the ratings per movie
-	s7()
+
+s7()
 - Using raw recommendation data, get the movie titles and only return those above min_avg_rating
 
 
-TODO: create support lookup table: 
-	movieID - Rating(0.5-5.0) - Count - %
+TODO: create support lookup table: movieID - Rating(0.5-5.0) - Count - %
 """
 
 
 def s1(input_file):
 	"""
-	['userId', 'movieId', 'rating', 'timestamp']
-
 	Process the input.csv data, extract rows where movie-rating tuples match with input
+
+    input_file: CSV file - the ml-ratings.csv has columns: ['userId', 'movieId', 'rating', 'timestamp']
 	"""
 	input_data = open(input_file, "r").readlines()[1:]
 
