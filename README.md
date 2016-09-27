@@ -67,6 +67,8 @@ With this list of users, the script obtains all of their cumulative movie-rating
 Once again, this data is further filtered by only selecting movie-ratings that occur above a certain threshold in frequency and in minimum movie rating. 
 As a result, the final output file contains movie recommendations that are both high in favorable ratings and occur frequently in the network of like-minded movie watchers.
 
+A number of Python libraries were tested to parse the full set of data (>300 MB of tuples in the `ml-ratings.csv` file). The `numpy`, `pickle`, and additional Python libraries did not lead to significant speed improvements, so the script parses the CSV tuples without any specialized support.
+
 
 ```
 $ python eng-q1.py # v1.0 for the project
@@ -80,9 +82,12 @@ Running Python implementation on the command line.
 ![Python CLI GIF](/docs/eng-py2.gif)
 
 
-
 ### Results
 
+This algorithm was tested against a sample of data as follows. 
+Using an initial input of ten tuples (the movies rated favorably by a single user), the system was able to recommend over 500 movies. 
+When the recommended films were compared to the actual ratings by the user, it was found that over 85% of the movie recommendations were rated favorably (with a rating of at least 4 out of 5). 
+These preliminary results suggest that the collaborative filtering system was able to effectively recommend movies that would be favorably received by the end user. 
 
 
 ## Next Steps
