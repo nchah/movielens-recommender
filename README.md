@@ -67,7 +67,7 @@ With this list of users, the script obtains all of their cumulative movie-rating
 Once again, this data is further filtered by only selecting movie-ratings that occur above a certain threshold in frequency and in minimum movie rating. 
 As a result, the final output file contains movie recommendations that are both high in favorable ratings and occur frequently in the network of like-minded movie watchers.
 
-A number of Python libraries were tested to parse the full set of data (>300 MB of tuples in the `ml-ratings.csv` file). The `numpy`, `pickle`, and additional Python libraries did not lead to significant speed improvements, so the script parses the CSV tuples without any specialized support.
+A number of Python libraries were tested to parse the full set of data (>300 MB of tuples in the `ml-ratings.csv` file). The `numpy`, `pickle`, and additional Python libraries did not lead to significant speed improvements, so the script parses the CSV tuples without any specialized support. The original script writes to stdout to show realtime progress, but removing this leads to a significant speed up. 
 
 
 ```
@@ -76,6 +76,19 @@ $ python eng-q1.py # v1.0 for the project
 
 $ python mlr-engine.py # refactored version
 ...
+
+
+# Running on a MacBook Pro 2015:
+$ time python mlr-engine.py
+real    4m7.895s
+user    2m41.626s
+sys     0m46.439s
+
+$ time python mlr-engine-quick.py
+real    1m18.558s
+user    0m56.948s
+sys     0m10.179s
+
 ```
 
 Running Python implementation on the command line.
