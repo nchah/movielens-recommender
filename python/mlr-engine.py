@@ -66,15 +66,13 @@ def s1(input_file):
 
 	print ">>> Accessing ratings data..."
 	ratings = open("../data/ml-ratings-lean.csv", "r").readlines()[1:]
-	# DONE: ratings = numpy.loadtxt(open("ml-ratings-lean.csv","rb"), delimiter=",", skiprows=1)
-	# ratings = numpy.load("ml-ratings-lean.npy")
 
 	count = 0
 	total = float(len(ratings))
 	for ln in ratings:  # range(0, len(ratings)):
 		count += 1  # Progress Bar
 		p = count / total * 100.0
-		sys.stdout.write("\r>>> Ratings processed: %d (%i)" % (count, p))
+		sys.stdout.write("\r>>> Ratings processed: %d (%i%%)" % (count, p))
 		sys.stdout.flush()
 
 		ln2 = ln.split(",")
@@ -180,7 +178,7 @@ def s4():
 	Get all movie-rating tuples by high agreement users
 	"""
 	# ratings_extract = open("a1-ratings-extract.csv", "r").readlines()
-	ratings = open("../data/ml-ratings-lean.csv", "r").readlines()
+	ratings = open("../data/ml-ratings-lean.csv", "r").readlines()[1:]
 	agreeing_users_extract = open("../data/output/a3-userids-extract-agreeing-users.csv", "r").readlines()
 	input_data = open("../data/input/v1-input-ratings.csv", "r").readlines()
 	input_data = input_data[1:]
@@ -196,10 +194,12 @@ def s4():
 	print ">>> # Users: " + str(len(agreeing_users))
 
 	count = 0
+	total = float(len(ratings))
 	for ln in ratings:
 		ln2 = ln.split(",")
 		count += 1
-		sys.stdout.write("\r>>> Ratings processsed: %i" % count)
+		p = count / total * 100.0
+		sys.stdout.write("\r>>> Ratings processsed: %d (%i%%)" % (count, p))
 		sys.stdout.flush()
 
 		pair = [ln2[1], ln2[2]]
@@ -309,7 +309,7 @@ def s7(min_avg_rating=4.0):
 	"""
 	Using raw recommendation data, get the movie titles and only return those above min_avg_rating
 	"""
-	movies = open("ml-movies.csv", "r").readlines()
+	movies = open("../data/ml-movies.csv", "r").readlines()
 	rec_data = open("../data/output/a6-movies-extract-recommended.csv", "r").readlines()
 
 	with open("../data/output/a7-movies-extract-recommended-films.csv", "a") as f:
