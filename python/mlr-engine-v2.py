@@ -65,7 +65,7 @@ def s1(input_file):
 	print ">>> Input User(s): " + str(input_user)
 
 	print ">>> Accessing ratings data..."
-	ratings = open("ml-ratings-lean.csv", "r").readlines()[1:]
+	ratings = open("../data/ml-ratings-lean.csv", "r").readlines()[1:]
 	# DONE: ratings = numpy.loadtxt(open("ml-ratings-lean.csv","rb"), delimiter=",", skiprows=1)
 	# ratings = numpy.load("ml-ratings-lean.npy")
 
@@ -180,7 +180,7 @@ def s4():
 	Get all movie-rating tuples by high agreement users
 	"""
 	# ratings_extract = open("a1-ratings-extract.csv", "r").readlines()
-	ratings = open("ml-ratings-lean.csv", "r").readlines()
+	ratings = open("../data/ml-ratings-lean.csv", "r").readlines()
 	agreeing_users_extract = open("a3-userids-extract-agreeing-users.csv", "r").readlines()
 	input_data = open("exp-2-input.csv", "r").readlines()
 	input_data = input_data[1:]
@@ -271,7 +271,7 @@ def s6(min_ratings=10):
 	temp_movie_ratings_sum = 0.0
 	temp_movie_counts = 0
 	temp_movie_avg = 0
-	
+
 	for n in range(0, len(extracted_ratings)):
 		count += 1  # Progress Bar
 		sys.stdout.write("\r>>> Ratings processsed: %i" % count)
@@ -338,12 +338,12 @@ def s7(min_avg_rating=4.0):
 
 
 if __name__ == '__main__':
-	# s1("exp-2-input.csv")
-	# s2()
-	# s3(7, 8)
-	# s4()
-	# s5()
-	# s6()
+	s1("../data/exp-2-input.csv")
+	s2()
+	s3(7, 8)
+	s4()
+	s5()
+	s6()
 	s7()
 
     # parser = argparse.ArgumentParser()
