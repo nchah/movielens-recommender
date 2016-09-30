@@ -8,6 +8,38 @@ This was a final project for a graduate course offered in the Winter Term (Janua
 
 Running the model on a sample of the MovieLens movie ratings data produced movie recommendations where >85% would produce favorable ratings.
 
+## Directory Tree
+
+The file structure for this repository.
+
+```
+$ tree --si
+
+├── [6.9k]  README.md
+├── [ 272]  data
+│   ├── [ 102]  input
+│   │   └── [ 307]  v1-input-ratings.csv
+│   ├── [1.4M]  ml-movies.csv
+│   ├── [1.2M]  ml-ratings-100k-sample.csv
+│   ├── [300M]  ml-ratings-lean.csv  # <-- original file too large for GitHub
+│   └── [ 408]  output
+│       ├── [600k]  a1-ratings-extract.csv
+│       ├── [  48]  a2-ratings-extract-counts-by-user-distrib.csv
+│       ├── [243k]  a2-ratings-extract-counts-by-user.csv
+│       ├── [  93]  a3-userids-extract-agreeing-users.csv
+│       ├── [570k]  a4-ratings-extract-recommended.csv
+│       ├── [ 69k]  a5-ratings-extract-recommended-sorted-counts.csv
+│       ├── [608k]  a5-ratings-extract-recommended-sorted.csv
+│       ├── [ 15k]  a6-movies-extract-recommended.csv
+│       └── [ 36k]  a7-movies-extract-recommended-films.csv
+├── [ 102]  docs
+│   └── [448k]  eng-py2.gif
+└── [ 204]  python
+    ├── [9.9k]  eng-q1.py
+    ├── [ 10k]  mlr-engine-quick.py
+    └── [ 10k]  mlr-engine.py
+```
+
 ## Datasets
 
 The following main data sources were used for this project.
@@ -99,11 +131,17 @@ Running Python implementation on the command line.
 
 This algorithm was tested against a sample of data as follows. 
 Using an initial input of ten tuples (the movies rated favorably by a single user), the system was able to recommend over 500 movies. 
-When the recommended films were compared to the actual ratings by the user, it was found that over 85% of the movie recommendations were rated favorably (with a rating of at least 4 out of 5). 
+The system would attempt to provide movie recommendations from like-minded movie watchers based on these ten tuples.
+When the recommended films were compared to the actual ratings by the user, it was found that over 85% of the >500 movie recommendations were rated favorably (with a rating of at least 4 out of 5) when compared to the user's actual ratings. 
 These preliminary results suggest that the collaborative filtering system was able to effectively recommend movies that would be favorably received by the end user. 
 
 
 ## Next Steps
+
+This preliminary system can be developed further in many different ways.
+
+
+
 
 
 ## References
