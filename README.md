@@ -6,11 +6,11 @@ Part of a final project for a graduate course in Data Analytics at the Universit
 
 This was a final project for a graduate course offered in the Winter Term (January-April, 2016) at the University of Toronto, Faculty of Information: INF2190 Data Analytics: Introduction, Methods, and Practical Approaches. Our group's full tech stack for this project was expressed in the acronym *MIPAW*: MySQL, IBM SPSS Modeler, Python, AWS, and Weka.
 
-Running the model on a sample of the MovieLens movie ratings data produced movie recommendations where >85% would produce favorable ratings.
+Running the model on the millions of MovieLens ratings data produced movie recommendations where >85% of the films would have been received with favorable ratings.
 
 ## Directory Tree
 
-The file structure for this repository.
+The file structure for this repository, with file sizes in SI units. 
 
 ```
 $ tree --si
@@ -73,7 +73,7 @@ Permalink: http://www.imdb.com/interfaces
 
 ### Tech Stack
 
-Each part of the tech stack used for this project was used to different degrees by each team member. 
+Each part of the tech stack for this project was utilized to varying degrees by the different team member. 
 
 - MySQL - primary database
 - IBM SPPS Modeler - analytics software for generating models
@@ -110,7 +110,7 @@ $ python mlr-engine.py # refactored version
 ...
 
 
-# Running on a MacBook Pro 2015:
+# Some rough speed metrics (MacBook Pro 2015, 2.7 GHz i5):
 $ time python mlr-engine.py
 real    4m7.895s
 user    2m41.626s
@@ -138,7 +138,7 @@ These preliminary results suggest that the collaborative filtering system was ab
 
 ## Next Steps
 
-This preliminary system can be developed further in many different ways.
+This preliminary system can be developed further in a number of ways.
 
 
 
