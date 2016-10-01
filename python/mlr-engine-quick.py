@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-# import argparse
 import csv
 import operator
 import sys
@@ -274,8 +273,8 @@ def s6(min_ratings=10):
 
     for n in range(0, len(extracted_ratings)):
         count += 1  # Progress Bar
-        sys.stdout.write("\r>>> Ratings processsed: %i" % count)
-        sys.stdout.flush()
+        #sys.stdout.write("\r>>> Ratings processsed: %i" % count)
+        #sys.stdout.flush()
 
         row1 = extracted_ratings[n].split(",")
         try:

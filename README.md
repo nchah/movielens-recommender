@@ -116,7 +116,7 @@ real    4m7.895s
 user    2m41.626s
 sys     0m46.439s
 
-$ time python mlr-engine-quick.py
+$ time python mlr-engine-quick.py # No stdout printing
 real    1m18.558s
 user    0m56.948s
 sys     0m10.179s
@@ -132,7 +132,7 @@ Running Python implementation on the command line.
 This algorithm was tested against a sample of data as follows. 
 Using an initial input of ten tuples (the movies rated favorably by a single user), the system was able to recommend over 500 movies. 
 The system would attempt to provide movie recommendations from like-minded movie watchers based on these ten tuples.
-When the recommended films were compared to the actual ratings by the user, it was found that over 85% of the >500 movie recommendations were rated favorably (with a rating of at least 4 out of 5) when compared to the user's actual ratings. 
+When the recommended films were compared to the actual ratings by the user, it was found that over 85% of the >500 movie recommendations were rated favorably (with a rating of at least 4 out of 5) when compared to the user's actual ratings for the films. 
 These preliminary results suggest that the collaborative filtering system was able to effectively recommend movies that would be favorably received by the end user. 
 
 
@@ -140,7 +140,8 @@ These preliminary results suggest that the collaborative filtering system was ab
 
 This preliminary system can be developed further in a number of ways.
 
-
+- Machine learning extension. It may be worthwhile to train a ML model based on millions of film rating tuples. This was partly done with the IBM SPSS Modeler implementation by a fellow group member.
+- Clustering the ratings data. There may be interesting trends or patterns in the ratings data when clustered according to year, genre, average rating, etc.
 
 
 
