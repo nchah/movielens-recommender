@@ -136,6 +136,9 @@ When the recommended films were compared to the actual ratings by the user, it w
 These preliminary results suggest that the collaborative filtering system was able to effectively recommend movies that would be favorably received by the end user. 
 
 
+![Chart of Actual Ratings for the Recommended Films](/docs/ratings-of-recommended-films.png)
+
+
 ## Next Steps
 
 This preliminary system can be developed further in a number of ways.
