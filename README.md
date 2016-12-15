@@ -1,10 +1,12 @@
 # movielens-recommender
 
-Part of a final project for a graduate course in Data Analytics at the University of Toronto (Winter term, 2016). Our group set out to create a movie recommendation engine that would recommend movies that would have a high chance of being enjoyed by the user.
+This implementation was part of a final project for a graduate course in Data Analytics at the University of Toronto (Winter term, 2016). 
+Our group set out to create a movie recommendation engine that would recommend movies that would have a high chance of being enjoyed by the user.
 
 ## Background
 
-This was a final project for a graduate course offered in the Winter Term (January-April, 2016) at the University of Toronto, Faculty of Information: INF2190 Data Analytics: Introduction, Methods, and Practical Approaches. Our group's full tech stack for this project was expressed in the acronym *MIPAW*: MySQL, IBM SPSS Modeler, Python, AWS, and Weka.
+This was a final project for a graduate course offered in the Winter Term (January-April, 2016) at the University of Toronto, Faculty of Information: INF2190 Data Analytics: Introduction, Methods, and Practical Approaches. 
+Our group's full tech stack for this project was expressed in the acronym *MIPAW*: MySQL, IBM SPSS Modeler, Python, AWS, and Weka.
 
 Running the model on the millions of MovieLens ratings data produced movie recommendations where >85% of the films would have been received with favorable ratings.
 
@@ -143,12 +145,15 @@ These preliminary results suggest that the collaborative filtering system was ab
 
 This preliminary system can be developed further in a number of ways.
 
-- Machine learning extension. It may be worthwhile to train a ML model based on millions of film rating tuples. This was partly done with the IBM SPSS Modeler implementation by a fellow group member.
-- Clustering the ratings data. There may be interesting trends or patterns in the ratings data when clustered according to year, genre, average rating, etc.
+- Supervised machine learning
+    - Further machine learning extension. It may be worthwhile to train a full-blown ML model based on millions of film rating tuples. This was partly done with the IBM SPSS Modeler implementation by a fellow group member.
+- Unsupervised machine learning
+    - Clustering the ratings data. There may be interesting trends or patterns in the ratings data when clustered according to year, genre, average rating, etc.
 
 
 
 ## References
 
 Schafer, J. B., Frankowski, D., Herlocker, J., & Sen, S. (2007). Collaborative filtering recommender systems. In The Adaptive Web (pp. 291-324). Springer Berlin Heidelberg.
+
 
