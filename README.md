@@ -88,6 +88,8 @@ Each part of the tech stack for this project was utilized to varying degrees by 
 I undertook my share of the project with inspiration from the [Collaborative Filtering](https://en.wikipedia.org/wiki/Collaborative_filtering) technique, which takes advantage of the predictive power of analyzing like-minded users. 
 At its most basic level, collaborative filtering is present in everyday affairs as it is “the process of filtering or evaluating items using the opinions of other people” (Schafer, Frankowski, Herlocker, & Sen, 2015).
 
+Collaborative filtering was also covered in Domingo's The Master Algorithm: "In 1994, a team of researchers from the University of Minnesota and MIT built a recommendation system based on what they called "a deceptively simple idea": people who agreed in the past are likely to agree again in the future. That notion led directly to the collaborative filtering systems that all self-respecting e-commerce sites have." (pg. 183).
+
 For example, if each tuple is structured as [id, movieId, rating], then the tuples [246, 2, 3.5] and [357, 2, 3.5] would suggest that both users 246 and 357 are like-minded in that they rated movie "2" with a "3.5" rating. 
 This underlying technique was combined with further processing steps and implemented in a Python CLI tool.
 
@@ -153,6 +155,9 @@ This preliminary system can be developed further in a number of ways.
 
 
 ## References
+
+Domingos, P. (2015). The master algorithm: How the quest for the ultimate learning machine will remake our world. Basic Books.
+Chicago	
 
 Schafer, J. B., Frankowski, D., Herlocker, J., & Sen, S. (2007). Collaborative filtering recommender systems. In The Adaptive Web (pp. 291-324). Springer Berlin Heidelberg.
 
